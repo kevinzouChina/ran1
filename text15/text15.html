@@ -27,7 +27,7 @@
 
   <button id="sort-btn">排序</button>
 
-<script type="text/javascript">
+ <script type="text/javascript">
 
 /**
  * getData方法
@@ -37,10 +37,9 @@
 function getData() {
   var oSource=document.getElementById("source");
   var oSourceChild=oSource.getElementsByTagName("li");
-  var data1=new Array();
-  var data=[];
+  var data=new Array();
   for(var i=0;i<oSourceChild.length;i++){
-    data[i]=oSourceChild[i].innerHTML.split(":");
+    data[i]=oSourceChild[i].innerHTML.split(": ");
   }
  return data;
 }
@@ -65,8 +64,9 @@ function sortAqiData(data) {
  */
 function render(data) {
   var oResort=document.getElementById("resort");
+  
   for(var i=0;i<data.length;i++){
-    oResort.innerHTML+="<li>"+"第"+(i+1)+"名："+data[i][0]+"</li>";
+    oResort.innerHTML+="<li>"+"第"+(i+1)+"名："+data[i][0]+data[i][1]+"</li>";
 
   }
 }
@@ -74,6 +74,8 @@ function btnHandle() {
   var aqiData = getData();
   aqiData = sortAqiData(aqiData);
   render(aqiData);
+  var btn = document.getElementById("sort-btn");
+  btn.disabled = true;
 }
 function init() {
 var oSort=document.getElementById("sort-btn");
