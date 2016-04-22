@@ -375,8 +375,13 @@ hr {
 	height: 100px;
 	margin: 0 auto;
 	background: url(../images/img01.jpg) repeat;
+	text-align:center;
+	line-height:100px;
 }
+#footer p{
 
+
+}
 
 
 
