@@ -1,0 +1,71 @@
+/*---------初始化默认样式------------*/
+*{
+	padding:0px;
+	margin:0px;
+}
+/*---------包裹层样式-----------------*/
+body{
+	background-color:#fff;
+	
+}
+#wrap{
+    width:955px;
+    margin:0px auto;
+    background:#FFDBE1;
+
+    
+}
+/*--------头部样式-------------------*/
+header{
+    background:url(../images/img01.jpg) repeat-x;
+    position:relative;
+}
+#headline{
+	 font-size: 48px;
+	 color:#F74B61;
+	 padding-top:50px;
+	 padding-bottom:10px;
+	 margin-left:196px;
+	 font-style:bold;
+	 font-style:italic;
+}
+.expect{
+    margin-left:196px;
+    color:#F74B61;
+    font-size:20px;
+}
+.head-image{
+	position:absolute;
+	top:0px;
+}
+#nav-ul{
+ margin-top:60px;
+ height:60px;
+ line-height:60px;
+}
+#nav-ul li{
+    display:inline-block;
+    margin-left:50px;
+}
+#nav-ul:first-child{
+	 margin-left:50px;
+}
+#nav-ul li a{
+	background:url(../images/img03.jpg) no-repeat left top;
+	padding-left:15px;
+	text-decoration:none;
+	color:#fff;
+}
+#nav-ul li a:hover{
+	color:red;
+    text-decoration:underline;
+}
+/*-------------------------脚部样式-------------------*/
+footer{
+height:100px;
+margin-top:10px;
+background:url(../images/img01.jpg) repeat-x top left;
+text-align:center;
+line-height:100px;
+color:#FF3366
+}
