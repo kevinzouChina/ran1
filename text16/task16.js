@@ -84,8 +84,8 @@ function delBtnHandle(city) {
 function init() {
 
   // 在这下面给add-btn绑定一个点击事件，点击时触发addBtnHandle函数
-
-   obtn.onclick=addBtnHandle;
+   obtn.addEventListener("click",addBtnHandle);
+  // obtn.onclick=addBtnHandle;
   // 想办法给aqi-table中的所有删除按钮绑定事件，触发delBtnHandle函数
    document.getElementById("aqi-table").addEventListener("click", function(event){
         if(event.target.nodeName.toLowerCase() === 'button') delBtnHandle.call(null, event.target.dataset.city);

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>说出你的爱</title>
+	<link href="style/css2.css" rel="stylesheet" type="text/css" />
+	<script>
+var max=0;
+function textlist() {
+max=textlist.arguments.length;
+for (i=0; i<max; i++)
+this[i]=textlist.arguments[i];
+}
+tl = new textlist(
+"常听人说，人世间最纯净的友情只存在于孩童时代。这是一句极其悲凉的话，居然有那么多人赞成，人生之孤独和艰难，可想而知.我并不赞成这句话。孩童时代的情只是愉快的嘻戏，成年人靠着回忆追加给它的东西很不真实。友情的真正意义产生于成年之后，它不可能在尚未获得意义之时便抵达最佳状态。其实，很多人都在某次友情感受的突变中，猛然发现自己长大的。                                                                    仿佛是哪一天的中午或傍晚，一位要好同学遇到的困难使你感到了一种不可推卸的责任，你放慢脚步忧思起来，开始人生的重量。就在这一刻，你突然长大友情的错位，来源于我们自身的混乱。从类似于那本连环画的起点开始，心中总有几缕飘渺的乐曲在盘旋，但生性又看不惯孤傲喜欢随遇而安，无所执持地面对日往来。这两个方面常常难于兼顾，时间一长，飘渺的乐曲已难以捕捉，身边的热闹又让人腻烦，寻访友情的孤舟在哪一边都无法靠岸无所适从间，一些珍贵的缘分都经稍纵即逝，而一堆无聊的关系却仍在不断灌溉"
+
+);
+var x = 0; pos = 0;
+var l = tl[0].length;
+function textticker() {
+document.tickform.tickfield.value = tl[x].substring(0, pos) + ".";
+if(pos++ == l) {
+pos = 0;
+setTimeout("textticker()", 2000000);
+if(++x == max) x = 0;
+l = tl[x].length;
+} else
+setTimeout("textticker()", 50);
+}
+</script>
+</head>
+<body  OnLoad="textticker()">
+<div id="wrap">
+	<header>
+		<div class="logo">
+			<h1 id="headline">说出你的爱</h1>
+			<span class="expect">Speak&nbsp;&nbsp;Loudly&nbsp;&nbsp;You&nbsp;&nbsp;Love</span>
+             <div class="head-image"><img src="images/img02.jpg" /></div>
+		</div>
+		<nav>
+			<ul id="nav-ul">
+				<li><a href="page3.html">爱的种类</a></li>
+				<li><a href="page6.html">爱的方式</a></li>
+				<li><a href="page10.html">文学描述</a></li>
+				<li><a href="page14.html">图片传递</a></li>
+				<li><a href="page18.html">视频述说</a></li>
+				<li><a href="page19.html">联系我们</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div id="content">
+	    <!--<img src="images/shu66.jpg" height="600px" width="955px" />-->
+		<div class="pa11-con">
+		<video controls="" autoplay="" name="media" id="div1"><source src="images/youqing.mp3" type="audio/mp3"></video>
+		<h3 style="position:absolute;top:-40px;left:-50px;z-index:100;width:250px;margin:20px">《关于友情》</h3>
+		<form name=tickform>
+<textarea name=tickfield rows=20 cols=50 style="background:url(images/shu66.jpg); height:610px;width:953px;color: #ff6699;position:absolute;top:-30px;left:-50px;padding-top:50px;padding-right:190px;padding-left:20px;;box-sizing:border-box; cursor: default; font-family: Arial; font-size: 20px" >The news will appear here when the page has finished loading.</textarea>
+</form>
+		</div>
+		
+	</div>
+	<footer>
+	<p><pre>13软土2班       梁金妹       18779112761</pre></p>
+	</footer>
+</div>

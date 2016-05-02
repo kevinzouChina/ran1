@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>说出你的爱</title>
+	<link href="style/css2.css" rel="stylesheet" type="text/css" />
+	<script>
+var max=0;
+function textlist() {
+max=textlist.arguments.length;
+for (i=0; i<max; i++)
+this[i]=textlist.arguments[i];
+}
+tl = new textlist(
+"我与父亲不相见已二年余了，我最不能忘记的是他的背影。那年冬天，祖母死了，父亲的差使也交卸了，正是祸不单行的日子，我从北京到徐州，打算跟着父亲奔丧回家。到徐州见着父亲，看见满院狼藉的东西，又想起祖母，不禁簌簌地流下眼泪。父亲说:事已如此，不必难过，好在天无绝人之路！                                                     近几年来，父亲和我都是东奔西走，家中光景是一日不如一日。他少年出外谋生，独力支持，做了许多大事。那知老境却如此颓唐！他触目伤怀，自然情不能自已。情郁于中，自然要发之于外；家庭琐屑便往往触他之怒。他待我渐渐不同往日。但最近两年的不见，他终于忘却我的不好，只是惦记着我，惦记着我的儿子。我北来后，他写了一信给我，信中说道，“我身体平安，惟膀子疼痛利害，举箸提笔，诸多不便，大约大去之期不远矣。”我读到此处，在晶莹的泪光中，又看见那肥胖的，青布棉袍，黑布马褂的背影。唉！我不知何时再能与他相见！"
+
+);
+var x = 0; pos = 0;
+var l = tl[0].length;
+function textticker() {
+document.tickform.tickfield.value = tl[x].substring(0, pos) + ".";
+if(pos++ == l) {
+pos = 0;
+setTimeout("textticker()", 2000000);
+if(++x == max) x = 0;
+l = tl[x].length;
+} else
+setTimeout("textticker()", 50);
+}
+</script>
+</head>
+<body  OnLoad="textticker()">
+<div id="wrap">
+	<header>
+		<div class="logo">
+			<h1 id="headline">说出你的爱</h1>
+			<span class="expect">Speak&nbsp;&nbsp;Loudly&nbsp;&nbsp;You&nbsp;&nbsp;Love</span>
+             <div class="head-image"><img src="images/img02.jpg" /></div>
+		</div>
+		<nav>
+			<ul id="nav-ul">
+				<li><a href="page3.html">爱的种类</a></li>
+				<li><a href="page6.html">爱的方式</a></li>
+				<li><a href="page10.html">文学描述</a></li>
+				<li><a href="page14.html">图片传递</a></li>
+				<li><a href="page18.html">视频述说</a></li>
+				<li><a href="page19.html">联系我们</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div id="content">
+	    <!--<img src="images/shu66.jpg" height="600px" width="955px" />-->
+		<div class="pa11-con">
+		<video controls="" autoplay="" name="media" id="div1"><source src="images/qinqing.mp3" type="audio/mp3"></video>
+		<h3 style="position:absolute;top:-40px;left:-50px;z-index:100;width:150px;margin:20px">《背影》</h3>
+		<form name=tickform>
+<textarea name=tickfield rows=20 cols=50 style="background:url(images/shu66.jpg); height:610px;width:953px;color: #ff6699;position:absolute;top:-30px;left:-50px;padding-top:50px;padding-right:190px;padding-left:20px;;box-sizing:border-box; cursor: default; font-family: Arial; font-size: 20px" >The news will appear here when the page has finished loading.</textarea>
+</form>
+		</div>
+		
+	</div>
+	<footer>
+	<p><pre>13软土2班       梁金妹       18779112761</pre></p>
+	</footer>
+</div>

@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>说出你的爱</title>
+<link href="style/css2.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="wrap">
+	<header>
+		<div class="logo">
+			<h1 id="headline">说出你的爱</h1>
+			<span class="expect">Speak&nbsp;&nbsp;Loudly&nbsp;&nbsp;You&nbsp;&nbsp;Love</span>
+             <div class="head-image"><img src="images/img02.jpg" /></div>
+		</div>
+		<nav>
+			<ul id="nav-ul">
+			<li><a href="page3.html">爱的种类</a></li>
+				<li><a href="page6.html">爱的方式</a></li>
+				<li><a href="page10.html">文学描述</a></li>
+				<li><a href="page14.html">图片传递</a></li>
+				<li><a href="page18.html">视频述说</a></li>
+				<li><a href="page19.html">联系我们</a></li>
+			</ul>
+		</nav>
+	</header>
+    <div id="p7-content">
+		    <div class="p7-top">
+			    <h2 >相册中的亲情</h2>
+			</div>
+			<div id="p7-line"></div>
+			<div class="p15-middle">
+				<div id="p15-top">
+					<h3>那些成长的足迹</h3>
+					<p>都是父母给我们最无私的爱，父母的爱是威严的、沉默的、忧郁的、深远的。</p>
+					<video controls="" autoplay="" name="media"><source src="images/fu.mp3" type="audio/mp3"></video>
+				</div>
+				<div id="p15-bottom">
+					<h3>第一次学走路</h3>
+					<p>还记得你小时候的样子吗？当我们一步步长大，直到迈出人生第一步，是我们父母牵着我们的手</p>
+					<img src="images/zoulu.jpg" height="200px" width="400px" />
+					<h3>第一次学说话</h3>
+					<p>还记得你小时候的样子吗？当我们一步步长大，直到发出第一个字，是我们父母千遍万遍的教导</p>
+					<img src="images/shuohua.jpg" height="200px" width="400px" />
+					<h3>第一次学写字</h3>
+					<p>第一次握着笔，第一次学写字，是父母大手握小手，教我们写出自己的名字</p>
+					<img src="images/xiezi.jpg" height="200px" width="400px" />
+					<h3>父母撑伞</h3>
+					<p>还记得他们送你上学的时候吗？还记得那个下雨天吗？</p>
+					<img src="images/chengsan.jpg" height="200px" width="400px" />
+					<h3>父亲的背影</h3>
+					<p>当我们一步步长大，到现在上大学时，父母也老了，他们不在年轻，背影也多了几份迟缓</p>
+					<img src="images/beiying4.jpg" height="200px" width="400px" />
+				</div>
+			</div>
+			</div>
+	<footer>
+		<p><pre>13软土2班       梁金妹    </pre></p>
+	</footer>
+</div>
+<script>
+var img=document.getElementById("p15-bottom");
+var imgs=img.getElementsByTagName("img");
+var time1=null;
+for(var i=0;i<imgs.length;i++){
+	imgs[i].onmouseover=function(){
+	    move(this,600);
+	}
+	imgs[i].onmouseout=function(){
+     stop(this,400);
+	}
+}
+function move(obj,oWidth){
+   clearInterval(time1);
+   time1=setInterval(function(){
+   var speed=(oWidth-obj.offsetWidth)/6;
+   speed=speed>0?Math.ceil(speed):Math.floor(speed);
+   if(obj.offsetWidth==oWidth){
+       clearInterval(time1);
+   }
+   else{
+       obj.style.width=obj.offsetWidth+speed+"px";
+   }
+   }
+   ,30)
+}
+function stop(obj,oWidth){
+   clearInterval(time1);
+   time1=setInterval(function(){
+   var speed=(oWidth-obj.offsetWidth)/6;
+   speed=speed>0?Math.ceil(speed):Math.floor(speed);
+   if(obj.offsetWidth==oWidth){
+       clearInterval(time1);
+   }
+   else{
+       obj.style.width=obj.offsetWidth+speed+"px";
+   }
+   }
+   ,30)
+}
+</script>
+</body>
+</html>
