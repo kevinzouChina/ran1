@@ -1,0 +1,19 @@
+	.g-hd .m-wrap,.g-hd .m-hdnavwrap,.g-bd .m-classtype,.g-bd .g-bottom,.g-ft .m-ft{
+		width:960px;
+		margin:0 auto;
+	}
+	.g-bd .m-classtype .m-course2{
+		margin-left:70px;
+		margin-right:80px;
+	}
+	.g-bd .m-classtype .m-course{
+		width:270px;
+	}
+	.g-bd .g-bottom .g-mn {
+		width:735px;
+	}
+	.g-ft .more{
+		display: inline-block;
+		*display: inline;
+		zoom:1;
+	}

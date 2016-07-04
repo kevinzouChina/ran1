@@ -1,0 +1,16 @@
+	.g-hd .m-wrap,.g-hd .m-hdnavwrap,.g-bd .m-classtype,.g-ft .m-ft,.g-bd .g-bottom{
+		width:1205px;
+		margin:0 auto;
+	}
+	.g-bd .m-classtype .m-course+.m-course{
+		margin-left:85px;
+	}
+	.g-bd .m-classtype .m-course{
+		width:343px;
+	}
+	.g-bd .g-bottom .g-mn {
+		width:980px;
+	}
+	.g-ft .more{
+		width:134px;
+	}
