@@ -92,7 +92,7 @@ function renderChart() {
       var color = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
       var marginLeft=(wrap.clientWidth/(Object.keys(charData).length))/2;
       var width=(wrap.clientWidth/(Object.keys(charData).length))/2;
-      str+="<div"+"  class="transform" title="+i+":"+charData[i]+"  style='display:inner-block;height:"+charData[i]+"px; "+"background:"+color+"; width:"+Math.floor(width)+"px; float:left; margin-right:"+Math.floor(marginLeft)+"px;'></div>";
+      str+="<div"+"   title="+i+":"+charData[i]+"  style='display:inner-block;height:"+charData[i]+"px; "+"background:"+color+"; width:"+Math.floor(width)+"px; float:left; margin-right:"+Math.floor(marginLeft)+"px;'></div>";
   }
   wrap.innerHTML=str;
 }
