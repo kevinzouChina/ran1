@@ -79,7 +79,7 @@ var chartData = {};
 // 记录当前页面的表单选项
 var pageState = {
   nowSelectCity: "北京",
-  nowGraTime: "month"
+  nowGraTime: "day"
 }
 
 /**
