@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>冒泡排序</title>
+</head>
+<body>
+	<script>
+		var arr=[5,4,1,2,3];
+		for(var i=0;i<arr.length;i++){
+			for(var j=0;j<arr.length-i-1;j++){
+				if(arr[j]>arr[j+1]){
+					var temp=arr[j];
+					arr[j]=arr[j+1];
+					arr[j+1]=temp;					
+				}	
+				console.log(arr);
+			}			
+		}
+		/*
+			每一次排序从头开始，两两相邻比较，最大的就放最后面，长度减一
+			然后重复，找出第二大的。
+			如同向上冒起的泡泡
+		 */		
+	</script>
+</body>
+</html>
