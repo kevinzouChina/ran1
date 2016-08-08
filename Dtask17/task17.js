@@ -88,11 +88,14 @@ var pageState = {
 function renderChart() {
   var str="";
   for(var i in charData){
-      // var color="#"+Math.floor(Math.random() * oxFFFFFF).toString(16);
-      var color = '#' + Math.floor(Math.random() * 0xFFFFFF).toString(16);
+      var color="#"+(Math.floor(Math.random() * 0xFFFFFF).toString(16));
+      if(color.length <7){
+        color=color+"0";
+      }
+      console.log(color);
       var marginLeft=(wrap.clientWidth/(Object.keys(charData).length))/2;
       var width=(wrap.clientWidth/(Object.keys(charData).length))/2;
-      str+="<div"+"   title="+i+":"+charData[i]+"  style='display:inner-block;height:"+charData[i]+"px; "+"background:"+color+"; width:"+Math.floor(width)+"px; float:left; margin-right:"+Math.floor(marginLeft)+"px;'></div>";
+      str+="<div"+"   title="+i+":"+charData[i]+"  style='display:inner-block;height:"+charData[i]+"px; "+"background:"+color+"; width:"+width+"px; float:left; margin-left:"+marginLeft+"px;'></div>";
   }
   wrap.innerHTML=str;
 }
@@ -212,6 +215,6 @@ function init() {
   initGraTimeForm()
   initCitySelector();
   initAqiChartData();
+  renderChart();
 }
 init();
-renderChart();

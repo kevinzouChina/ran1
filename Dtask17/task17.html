@@ -4,9 +4,21 @@
     <meta charset="utf-8">
     <title>IFE JavaScript Task 01</title>
      <style>
-      .transform{
-        -webkit-translate:"height" 0.5 ease-in;
-      }
+        .aqi-chart-wrap{
+          display:flex;
+          justify-content: middle;
+          align-items:flex-end;
+          height:500px;
+          border:1px solid red;
+        }
+        .aqi-chart-wrap div{
+          flex:1;
+          height:0px;
+          transition: height 1s ease-in;
+        }
+        .aqi-chart-wrap div:first-child{
+            margin-left:0 !important;
+        }
     </style>
   </head>
 <body>
@@ -24,7 +36,7 @@
     </select>
   </fieldset>
 
-  <div class="aqi-chart-wrap" style="text-align:center;-webkit-transform:rotate(180deg);position: relative;overflow: hidden;border:1px solid red;height:500px;border-top-color: yellow">
+  <div class="aqi-chart-wrap" >
   </div>
   <script src="task17.js"></script>
 </body>
