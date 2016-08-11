@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task23</title>
+	<style>
+		div{border:1px solid red;margin:20px 3px;background: #fff}
+		.four{border:2px solid yellow;height:200px;display: flex;}
+		.four .three:nth-child(1),.four .three:nth-child(2){flex:1;display: flex;}
+		.two{flex:1;display: flex;}
+		.one{flex:1;}
+		.fish{width: 200px}
+		.button,.inquire{margin:0 200px 30px;}
+		input{margin:30px 0 30px 200px;}
+	</style>
+</head>
+<body>
+
+	<section>
+	<div class="four">super
+		<div class="three">cat
+			<div class="two">apple
+				<div class="one">pear</div>
+				<div class="one">pig</div>
+				<div class="one">cola</div>
+				<div class="one">soccer</div>
+			</div>
+			<div class="two">phone</div>
+			<div class="two">
+				<div class="one">book</div>
+				<div class="one">school</div>
+			</div>
+		</div>
+		<div class="three">node
+			<div class="two">human
+				<div class="one">code</div>
+				<div class="one">operate</div>
+				<div class="one">man</div>
+			</div>
+			<div class="two">program
+				<div class="one">bement
+					<div class="inner">cat</div>
+				</div>
+				<div class="one">glass</div>
+			</div>
+		</div>
+		<div class="three fish">fish</div>
+	</div>
+	</section>
+	<button class="button">深度优先遍历</button>
+	<button class="button">广度优先遍历</button>
+	<br>
+	<input class="content" type="text" />
+	<br>
+	<button class="inquire">深度遍历查询</button>
+	<button class="inquire">广度遍历查询</button>
+	<script type="text/javascript" src="task23.js"></script>
+</body>
+</html>

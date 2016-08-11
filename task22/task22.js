@@ -1,6 +1,6 @@
 //存放遍历到节点的数组
 var arr=[];
-
+var index=0;
 //定时器变量
 var time=null;
 
@@ -35,6 +35,26 @@ CreateTree.prototype={
 			arr.push(node);
 		}
 
+	},
+
+	//树的深度遍历
+	treeOrder:function(node){
+		if(!(node == null)){
+			arr.push(node);
+			for(var i=0;i<node.children.length;i++){
+				arguments.callee(node.children[i]);	
+			}
+		}
+	},
+
+	//树的广度遍历
+	breadOrder:function(node){
+		if(node){
+			arr.push(node);
+			arguments.callee(node.nextElementSibling);
+			node=arr[index++];
+			arguments.callee(node.firstElementChild);
+		}
 	}		
 }
 CreateTree.prototype.constructor=CreateTree;
@@ -83,6 +103,24 @@ addEvent(pre[2],'click',function(){
 	animation();
 })
 
+addEvent(pre[3],'click',function(){
+	//初始化
+	init();
+	//得到遍历数组arr;
+	tree.treeOrder(wrap);
+	//设置动画效果
+	animation();
+})
+
+//树的广度遍历
+addEvent(pre[4],'click',function(){
+	//初始化
+	init();
+	//得到遍历数组arr;
+	tree.breadOrder(wrap);
+	//设置动画效果
+	animation();
+})
 
 //动画效果
 function animation(){
