@@ -21,7 +21,7 @@ function addEvent(ele,type,handle){
 	}
 }
 
-//构造器
+//创建树构造器
 function CreateTree(){};
 CreateTree.prototype={
 	//深度优先排序
