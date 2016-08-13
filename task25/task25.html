@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task25-树形组件</title>
+	<link href="http://at.alicdn.com/t/font_1471005800_5684934.css" rel="stylesheet" type="text/css"/>
+	<style>
+		.wrap{position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);border:1px solid #000;padding:30px;color:blue;}
+		.tree{margin:20px 0 0 30px;}
+		.two{margin-left:20px;}
+		.three{margin-left:20px;}
+		.four{margin-left:20px;}
+		.tree div{padding:5px;}
+		.icon{border-width:5px 5px 0px 5px;border-color:red transparent;border-style:solid;margin-top:5px;margin:8px 5px 0 0;display: inline-block;}
+		.checkicon{border-width:5px 0 5px 5px;border-color:transparent red;border-style: solid;margin-top:5px;margin:8px 5px 0 0;display: inline-block;}
+		.icon-jia,.icon-chacha{margin-left:10px;color:red;font-size:14px;}
+		.chachajia i{display: none;}
+		.chachajia:hover >i{display: inline;}		
+		.chachajia{display: inline-block;width:40px;height:15px;}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<input type="text" id="content" />
+		<button id="seach">搜索</button>
+		<button id="delete">清除</button>
+		<div id="showResult"></div>
+		 <div class="tree">
+			<!-- <div class="one"><span class="icon"></span>食物
+				<div class="two"><span class="icon"></span>水果
+					<div class="three"><span class="icon"></span>苹果</div>
+					<div class="three"><span class="icon"></span>香蕉</div>
+					<div class="three"><span class="icon"></span>葡萄
+						<div class="four"><span class="icon"></span>水晶葡萄</div>
+					</div>
+				</div>
+				<div class="two"><span class="icon"></span>蔬菜
+					<div class="three"><span class="icon"></span>包菜</div>
+					<div class="three"><span class="icon"></span>白菜</div>
+					<div class="three"><span class="icon"></span>萝卜
+						<div class="four"><span class="icon"></span>红萝卜</div>
+						<div class="four"><span class="icon"></span>白萝卜</div>
+					</div>
+				</div>
+				<div class="two"><span class="icon"></span>肉类
+					<div class="three"><span class="icon"></span>鸡肉</div>
+					<div class="three"><span class="icon"></span>瘦肉</div>
+					<div class="three"><span class="icon"></span>鸭肉</div>				
+				</div>
+			</div>  -->
+		</div>
+	</div>
+	<script src="task25.js"></script>
+</body>
+</html>
