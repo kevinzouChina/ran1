@@ -1,0 +1,14 @@
+.wrap{position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);border:1px solid #000;padding:30px;color:blue;}
+.tree{margin:20px 0 0 30px;}
+.div{margin-left:20px;}
+.tree div{padding:5px;}
+.icon{border-width:5px 5px 0px 5px;border-color:red transparent;border-style:solid;margin-top:5px;margin:8px 5px 0 0;display: inline-block;}
+.checkicon{border-width:5px 0 5px 5px;border-color:transparent red;border-style: solid;margin-top:5px;margin:8px 5px 0 0;display: inline-block;}
+.icon-jia,.icon-chacha{margin-left:10px;color:red;font-size:14px;}
+.chachajia i{display: none;}
+.chachajia:hover >i{display: inline;}		
+.chachajia{display: inline-block;width:60px;height:15px;}
+.visible{display: block;}
+.hidden{display: none;}
+.nowSeach{background: yellow}
+.seached{background: #fff}

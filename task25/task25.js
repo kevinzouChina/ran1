@@ -37,15 +37,7 @@ Tree.prototype={
       var html = "";
       if(params.length){
         for (var i = 0; i < params.length; i++) {
-          html += '<div class="div visible seached">\
-         			 <span class="icon"></span>'
-          			 +params[i]+'\
-          			 <span class="chachajia">\
-          			 	<i class="iconfont icon-jia"></i>\
-          			 	<i class="iconfont icon-chacha"></i>\
-          			 </span>' 
-          			 + this.findSub(obj[params[i]]) 
-          		 +'</div>';
+          html += '<div class="div visible seached"><span class="icon"></span>'+params[i]+'<span class="chachajia"><i class="iconfont icon-jia"></i><i class="iconfont icon-chacha"></i></span>'+this.findSub(obj[params[i]]) +'</div>';
         }
       }
       return html;
@@ -97,7 +89,7 @@ Tree.prototype={
 			ele.parentNode.parentNode.appendChild(div);			
 		}
 		else{
-			alert("请输入要添加节点的值");
+			alert("请在文本框输入要添加节点的值");
 		}
 	},
 
@@ -138,8 +130,7 @@ Tree.prototype={
 			j++;
 			if(j<arr.length){
 				arr[j-1].className=arr[j-1].className.replace("nowSeach","seached");
-				arr[j].className=arr[j].className.replace("seached","nowSeach");
-				cons						
+				arr[j].className=arr[j].className.replace("seached","nowSeach");					
 			}
 			else{
 				arr[arr.length-1].className=arr[arr.length-1].className.replace("nowSeach","seached");
@@ -212,7 +203,8 @@ Tree.prototype={
 				newTree.toSearch(theTree);
 				for(var i=1;i<arr.length;i++){
 					var flag=false;
-					var result=arr[i].childNodes[2].nodeValue.trim();
+					console.log(arr[i].childNodes[1].nodeValue);
+					var result=arr[i].childNodes[1].nodeValue.trim();
 					if(result==theInput.value){
 						flag=true;
 						break;
