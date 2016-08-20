@@ -2,46 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>task25-树形组件</title>
-	<link href="http://at.alicdn.com/t/font_1471005800_5684934.css" rel="stylesheet" type="text/css"/>
-	<link href="task25.css" rel="stylesheet" type="text/css" />
+	<title>Document</title>
 </head>
 <body>
-	<div class="wrap">
-		<input type="text" id="content" />
-		<button id="seach">搜索</button>
-		<button id="delete">清除</button>
-		 <div class="tree"></div>		 
-	</div>
-
-	<script src="task25.js"></script>
 	<script>
-		var theInput=document.getElementById("content");
-	  	var theTree=document.getElementsByClassName("tree")[0];
-		var arr=[];
-		var timer=null;
-
-		var obj={
-			"食物":{
-				"水果":{
-					"苹果":{},
-					"香蕉":{},
-					"葡萄":{}
-				},
-				"蔬菜":{
-					"包菜":{},
-					"白菜":{},
-					"萝卜":{}
-				},
-				"肉类":{
-					"鸡肉":{},
-					"瘦肉":{},
-					"鸭肉":{}
-				}
-			}
-		}
-		var newTree=new Tree(theTree,obj);		
-		newTree.createTree();
+		
+	function valueAtBit(num, bit) {
+		var newnum=num.toString(2);
+		return newnum.split('').reverse()[bit-1];
+	}
+	var a=valueAtBit(128,8)
 	</script>
 </body>
 </html>

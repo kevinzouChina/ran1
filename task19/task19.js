@@ -25,20 +25,13 @@ var eventUtil={
 var number=document.getElementById("number");
 var change=document.getElementsByClassName("change");
 var wrap=document.getElementsByClassName("wrap")[0];
-// var arr=[];
-//数组中每个元素的迭代方法
-function each(arr, fn) {
-    for (var cur = 0; cur < arr.length; cur++) {
-        fn(arr[cur]);
-    }
-}
 
 //将队列的操作封装
 var queue={
 	arr:[],
 	paint:function(){
 		var str="";
-		each(this.arr,function(item){str+="<div style='height:"+item+"px'></div>";})
+		this.arr.forEach(function(item,index,array){str+="<div style='height:"+item+"px'></div>";})
 		wrap.innerHTML=str;
 		addDivDelete();
 	},
@@ -136,16 +129,7 @@ var queue={
 
 }
 
-//给每个wrap里面的div绑定删除函数
-function addDivDelete(){
-	for(var i=0;i<wrap.childNodes.length;i++){
-		eventUtil.addEvent(wrap.childNodes[i],"click",(function(i){
-			return function(){
-				return queue.deleteId(i);
-		};
-		})(i))
-	}
-}
+
 
 eventUtil.addEvent(change[0],"click",function(){
 	var input=number.value;
@@ -175,6 +159,28 @@ eventUtil.addEvent(change[3],"click",function(){queue.rightPop()});
 eventUtil.addEvent(change[4],"click",function(){queue.disorganize()});
 eventUtil.addEvent(change[5],"click",function(){queue.sortBubble()});
 eventUtil.addEvent(change[6],"click",function(){queue.sortOption()});
+//给每个wrap里面的div绑定删除函数
+
+// function addDivDelete(){
+// 	for(var i=0;i<wrap.childNodes.length;i++){
+// 		eventUtil.addEvent(wrap.childNodes[i],"click",(function(i){
+// 			return function(){
+// 				return queue.deleteId(i);
+// 		};
+// 		})(i))
+// 	}
+// }
+eventUtil.addEvent(wrap,"click",function(event){
+	// for(var i=0;i<wrap.children.length;i++){
+	// 	if(wrap.children[i]==event.srcElement){
+	// 		queue.deleteId(i);
+	// 	}
+		
+	// }
+	var i=[].indexOf(wrap.children,event.srcElement);
+	queue.deleteId(i);
+	// wrap.removeChild(event.srcElement);
+})
 
 
 

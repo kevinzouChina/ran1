@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>影碟出租</title>
+</head>
+<body>
+	<script src="list.js"></script>
+	<script>
+		var movie=["one","two","three","four","five","six"];
+		//将数组中的数据保存到列表中
+		var movieList=new List();
+		for(var i=0;i<movie.length;i++){
+			movieList.append(movie[i]);
+		}
+
+		//显示影碟店里现情况清单
+		function displayList(list){
+			for(list.front();list.currPos()<list.length();list.next()){
+				if(list.getElement() instanceof Customer){
+					console.log(list.getElement()['name']+":"+list.getElement()['movie']);
+				}
+				else{
+					console.log(list.getElement());					
+				}
+			}
+		}
+
+		//用户列表
+		var customersList=new List();
+
+		//构造一个对象来表示用户和电影的关系
+		function Customer(name,movie){
+			this.name=name;
+			this.movie=movie;
+		}
+
+		//检出电影
+		function checkMovie(name,movie,movieList,customerList){
+			if(movieList.contains(movie)){
+				var c=new Customer(name,movie);
+				customerList.append(c);
+				movieList.remove(movie);
+			}
+			else{
+				console.log('该影片不存在');
+			}
+		}
+
+		//试验
+		displayList(movieList);
+		checkMovie("haha","one",movieList,customersList);
+		displayList(customersList);
+		displayList(movieList);
+	</script>
+</body>
+</html>
