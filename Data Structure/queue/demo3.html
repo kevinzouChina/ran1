@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>优先排序</title>
+</head>
+<body>
+	<script src="queue.js"></script>
+	<script>
+		//重写dequeue方法
+		function dequeue(){
+			for(var i=1;i<this.dataStore.length;i++){
+				var item=0;
+				if(this.dataStore[i].code<this.dataStore[item].code){
+					item=i;
+				}
+			}
+			return this.dataStore.splice(item,1);
+		}
+
+		//构造病人对象
+		function Patient(name,code){
+			this.name=name;
+			this.code=code;
+		}
+
+		//重写toString方法
+		function toString(){
+			var str="";
+			for(var i=0;i<this.dataStore.length;i++){
+				str+=this.dataStore[i].name+'code'+this.dataStore[i].code+'\n';
+			}
+			return str;
+		}
+
+		//试验
+		var q=new Queue();
+		var p1=new Patient('11',1);
+		var p2=new Patient('22',2);
+		var p3=new Patient('33',0);
+		q.enqueue(p1);
+		q.enqueue(p2);
+		q.enqueue(p3);
+		var aa=q.dequeue();
+		var bb=q.toString(); 
+	</script>
+</body>
+</html>

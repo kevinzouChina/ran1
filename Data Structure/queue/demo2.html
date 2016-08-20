@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数据排序</title>
+</head>
+<body>
+	<script src="queue.js"></script>
+	<script type="text/javascript">
+		//第一步，先排个位
+		var queues=[];
+		for(var i=0;i<10;i++){
+			queues[i]=new Queue();
+		}
+
+		var arr=[];
+		for(var i=0;i<10;i++){
+			arr.push(Math.ceil(Math.random()*101));
+		}
+		// var queue0=new Queue();
+		// var queue1=new Queue();
+		// var queue2=new Queue();
+		// var queue3=new Queue();
+		// var queue4=new Queue();
+		// var queue5=new Queue();
+		// var queue6=new Queue();
+		// var queue7=new Queue();
+		// var queue8=new Queue();
+		// var queue9=new Queue();
+		// var queues=[queue0,queue1,queue2,queue3,queue4,queue5,queue6,queue7,queue8,queue9];
+		// var arr=[91,46,85,15,92,35,31,22];
+		
+		//根据个位数分配到相应的队列中
+		function distribute(nums,queues,digit){
+			for(var i=0;i<nums.length;i++){
+				if(digit==1){
+					queues[nums[i]%10].enqueue(nums[i]);
+				}
+				else{
+					queues[Math.floor(nums[i]/10)].enqueue(nums[i]);
+				}
+			}
+		}
+
+		//从队列中收集数字
+		function collect(queues){
+			var nums=[];
+			for(var i=0;i<queues.length;i++){
+				while(!queues[i].empty()){
+					nums.push(queues[i].dequeue());					
+				}
+			}
+			return nums;
+		}
+
+		//试验
+		distribute(arr,queues,1);
+		var aa=collect(queues);
+		distribute(arr,queues,10);
+		var bb=collect(queues);
+	</script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>舞伴分配问题</title>
+</head>
+<body>
+	<script type="text/javascript" src="queue.js"></script>
+	<script>
+		//创建舞者对象
+		function Dance(name,sex){
+			this.name=name;
+			this.sex=sex;
+		}
+
+		//实例化舞者，并以数组形式存储
+		var dance1=new Dance("one",'w');
+		var dance2=new Dance("two",'m');
+		var dance3=new Dance("three",'w');
+		var dance4=new Dance("four",'m');
+		var dance5=new Dance("five",'w');
+		var dance=[dance1,dance2,dance3,dance4,dance5];	
+
+		//创建两个队列来存储男舞者女舞者	
+		var fedance=new Queue();
+		var mandance=new Queue();
+		for(var i=0;i<dance.length;i++){
+			if(dance[i]['sex']=='w'){
+				fedance.enqueue(dance[i]);
+			}
+			else{
+				mandance.enqueue(dance[i]);
+			}
+		}
+
+		//舞者配对
+		function getDance(male,female){
+			while(!male.empty()&&!female.empty()){
+				var name1=male.dequeue().name;
+				var name2=female.dequeue().name;
+				console.log('男舞者'+name1+'女舞者'+name2);
+			}
+		}
+
+		//试验
+		getDance(mandance,fedance);
+	</script>
+</body>
+</html>
