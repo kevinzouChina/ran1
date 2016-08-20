@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数制间的转换</title>
+</head>
+<body>
+	<script src="stack.js"></script>
+	<script type="text/javascript">
+		function mulBase(num,base){
+			var stack=new Stack();
+			do{
+				stack.push(num%base);
+				num=Math.floor(num/base);
+			}while(num>0);
+			var str="";
+			while(stack.length()>0){
+				str+=stack.pop();
+			}
+			return str;
+		}
+
+		var a=mulBase(44,2);
+	</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>递归5的阶乘</title>
+</head>
+<body>
+	<script type="text/javascript" src="stack.js"></script>
+	<script type="text/javascript">
+		function mul(n){
+			var stack=new Stack();
+			while(n>0){
+				stack.push(n--);
+			}
+			var result=1;
+			while(stack.length()>0){
+				result*=stack.pop();
+			}
+			return result;
+		}
+
+		var a=mul(5);
+	</script>
+</body>
+</html>

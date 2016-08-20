@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>回文</title>
+</head>
+<body>
+	<script src="stack.js"></script>
+	<script type="text/javascript">
+		function isPalindrome(word){
+			var stack1=new Stack();
+			for(var i=0;i<word.length;i++){
+				stack1.push(word[i]);
+			}
+			var str="";
+			while(stack1.length()>0){
+				str+=stack1.pop();
+			}
+			if(word==str){
+				return true;
+			}
+			else{
+				return false;
+			}
+		}
+
+		var a=isPalindrome('123321')
+	</script>
+</body>
+</html>
